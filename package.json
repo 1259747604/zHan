@@ -1,47 +1,48 @@
 {
-    "name": "zHan",
-    "author": "tt",
-    "version": "1.0.0",
-    "private": true,
-    "main": "index.js",
-    "scripts": {
-        "start": "",
-        "dev": "",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "prepare": "husky install"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/1259747604/zHan.git"
-    },
-    "keywords": [],
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/1259747604/zHan/issues"
-    },
-    "homepage": "https://github.com/1259747604/zHan#readme",
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^4.0.0",
-        "@typescript-eslint/parser": "^4.0.0",
-        "babel-eslint": "^10.0.0",
-        "eslint": "^7.5.0",
-        "eslint-config-react-app": "^6.0.0",
-        "eslint-plugin-flowtype": "^5.2.0",
-        "eslint-plugin-import": "^2.22.0",
-        "eslint-plugin-jsx-a11y": "^6.3.1",
-        "eslint-plugin-react": "^7.20.3",
-        "eslint-plugin-react-hooks": "^4.0.8",
-        "husky": "^6.0.0",
-        "lint-staged": "^11.0.0",
-        "prettier": "2.3.2"
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-    ],
-    "lint-staged": {
-        "*.js": "eslint --cache --fix",
-        "*.{js,css,md}": "prettier --write"
-    }
+  "name": "zHan",
+  "author": "tt",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1259747604/zHan.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1259747604/zHan/issues"
+  },
+  "homepage": "https://github.com/1259747604/zHan#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "babel-eslint": "^10.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "2.3.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{js,ts,css,md}": "prettier --write"
+  }
 }
