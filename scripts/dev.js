@@ -19,4 +19,5 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 }
 
 console.log("🚀 ~ file: dev.js ~ line 11 ~ env", process.env.Host);
+console.log("🚀 ~ file: dev.js ~ line 11 ~ env", process.env.Host);
 console.log(chalk.cyan("Hello", "World!", "Foo", "bar", "biz", "baz"));
