@@ -8,3 +8,15 @@ process.on("unhandledRejection", err => {
 });
 
 require("../config/env");
+
+const chalk = require("../tt-dev-utils/chalk");
+const paths = require("../config/paths");
+const checkRequiredFiles = require("../tt-dev-utils/checkRequiredFiles");
+
+// 检查必须文件
+if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+    process.exit(1);
+}
+
+console.log("🚀 ~ file: dev.js ~ line 11 ~ env", process.env.Host);
+console.log(chalk.cyan("Hello", "World!", "Foo", "bar", "biz", "baz"));
