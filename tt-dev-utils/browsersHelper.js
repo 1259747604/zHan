@@ -40,7 +40,7 @@ function checkBrowsers(dir, isInteractive, retry = true) {
     }
 
     if (!retry) {
-        return Promise.reject(new Error(chalk.red("As of react-scripts >=2 you must specify targeted browsers.") + os.EOL + `Please add a ${chalk.underline("browserslist")} key to your ${chalk.bold("package.json")}.`));
+        return Promise.reject(new Error(chalk.red("As of app >=2 you must specify targeted browsers.") + os.EOL + `Please add a ${chalk.underline("browserslist")} key to your ${chalk.bold("package.json")}.`));
     }
 
     return shouldSetBrowsers(isInteractive).then(shouldSetBrowsers => {

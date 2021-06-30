@@ -22,5 +22,19 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 const HOST = process.env.HOST || "0.0.0.0";
 const DEFAULT_PORT = parseInt(process.env.PORT) || 3000;
 
+const { checkBrowsers } = require("../tt-dev-utils/browsersHelper");
+let isInteractive = process.stdout.isTTY;
+
+checkBrowsers(paths.appPath, isInteractive)
+    .then(() => {
+
+    })
+    .then(port => {})
+    .catch(err => {
+        if (err && err.message) {
+            console.log(chalk.redBright(err.message));
+        }
+        process.exit(1);
+    });
+
 console.log("🚀 ~ file: dev.js ~ line 11 ~ env", process.env.Host);
-console.log(chalk.cyan("Hello", "World!", "Foo", "bar", "biz", "baz"));
