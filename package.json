@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./scripts/dev",
-    "dev": "",
+    "dev": "node ./scripts/dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },
@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
-    "dotenv-expand": "^5.1.0"
+    "dotenv-expand": "^5.1.0",
+    "t-devtools": "^1.0.3"
   }
 }
