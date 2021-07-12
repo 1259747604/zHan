@@ -9,9 +9,10 @@ process.on("unhandledRejection", err => {
 
 require("../config/env");
 
-const chalk = require("../tt-dev-utils/chalk");
+const chalk = require("t-devtools/chalk");
 const paths = require("../config/paths");
-const checkRequiredFiles = require("../tt-dev-utils/checkRequiredFiles");
+const checkRequiredFiles = require("t-devtools/checkRequiredFiles");
+const { choosePort } = require("t-devtools/WebpackDevServerUtils");
 
 // 检查必须文件
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
@@ -22,14 +23,16 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 const HOST = process.env.HOST || "0.0.0.0";
 const DEFAULT_PORT = parseInt(process.env.PORT) || 3000;
 
-const { checkBrowsers } = require("../tt-dev-utils/browsersHelper");
+const { checkBrowsers } = require("t-devtools/browsersHelper");
 let isInteractive = process.stdout.isTTY;
 
 checkBrowsers(paths.appPath, isInteractive)
     .then(() => {
-
+        return choosePort(HOST, DEFAULT_PORT);
     })
-    .then(port => {})
+    .then(port => {
+        console.log("🚀 ~ file: dev.js ~ line 34 ~ port", port);
+    })
     .catch(err => {
         if (err && err.message) {
             console.log(chalk.redBright(err.message));

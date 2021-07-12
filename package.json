@@ -52,6 +52,6 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "t-devtools": "^1.0.3"
+    "t-devtools": "^1.0.7"
   }
 }
